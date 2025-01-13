@@ -10,11 +10,16 @@ import { AppStateProvider } from './state/AppProvider'
 
 import './index.css'
 
+import {MessageDialog} from './components/Utilities/MessageDialog'
+
 initializeIcons()
 
 export default function App() {
   return (
     <AppStateProvider>
+
+      <MessageDialog/>
+      
       <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
