@@ -3,7 +3,7 @@ import { Dialog, DialogFooter, PrimaryButton, DefaultButton } from '@fluentui/re
 
 
 const config_rosu = {
-  message: "Models make mistakes, it is the user's responsibility to check the answers.",
+  message: "Models can make mistakes; it is the user's responsibility to verify the answers.",
 };
 
 export const MessageDialog = () => {
