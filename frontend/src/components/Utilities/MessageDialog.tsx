@@ -3,8 +3,11 @@ import { Dialog, DialogFooter, PrimaryButton, DefaultButton } from '@fluentui/re
 
 
 const config_rosu = {
-  message: "Models can make mistakes; it is the user's responsibility to verify the answers.",
+  message: import.meta.env.CUSTOM_DISCLAIMER || 
+    "Models can make mistakes; it is the user's responsibility to verify the answers.",
 };
+
+console.log('test:' + import.meta.env.CUSTOM_DISCLAIMER)
 
 export const MessageDialog = () => {
   const [isDialogVisible, setIsDialogVisible] = useState(false);
@@ -38,8 +41,8 @@ export const MessageDialog = () => {
         }}
       >
         <DialogFooter>
-          <PrimaryButton onClick={rosu_Accept} text="I Accept" />
-          <DefaultButton onClick={rosu_deny} text="I Deny" />
+          <PrimaryButton onClick={rosu_Accept} text="Accept" />
+          <DefaultButton onClick={rosu_deny} text="Deny" />
         </DialogFooter>
       </Dialog>
     </>
