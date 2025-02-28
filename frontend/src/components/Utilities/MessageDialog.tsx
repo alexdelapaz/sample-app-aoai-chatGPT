@@ -40,6 +40,18 @@ export const MessageDialog = () => {
           title: "Rules of System Use",
           subText: config_rosu.message,
         }}
+
+        styles={{
+          main: {
+            selectors: {
+              ['@media (min-width: 480px)']: {
+                width: 800,
+                minWidth: 800,
+                maxWidth: '1000px'
+              }
+            }
+          }
+        }}
       >
         <DialogFooter>
           <PrimaryButton onClick={rosu_Accept} text="Accept" />
